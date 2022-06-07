@@ -27,6 +27,7 @@ public class UserForm {
     @Pattern(regexp = PHONE_REG, message = "請輸入正確手機號碼")
     private String phone;
 
+    @NotBlank(message = "不能為空值")
     @Email(message = "請輸入正確信箱")
     private String email;
 

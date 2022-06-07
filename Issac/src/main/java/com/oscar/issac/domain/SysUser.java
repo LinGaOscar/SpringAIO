@@ -40,6 +40,6 @@ public class SysUser {
 
     @Override
     public int hashCode() {
-        return getClass().hashCode();
+        return  getClass().hashCode();
     }
 }

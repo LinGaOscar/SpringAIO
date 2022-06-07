@@ -14,16 +14,20 @@ public class UserForm {
 
     public static final String PHONE_REG = "^09\\d{8}$";
 
-    @NotBlank
+    @NotBlank(message = "不能為空值")
     private String username;
-    @NotBlank
+
+    @NotBlank(message = "不能為空值")
     @Length(min = 6, message = "長度最小為6位")
     private String password;
-    @NotBlank
+
+    @NotBlank(message = "不能為空值")
     private String confirmPassword;
+
     @Pattern(regexp = PHONE_REG, message = "請輸入正確手機號碼")
     private String phone;
-    @Email
+
+    @Email(message = "請輸入正確信箱")
     private String email;
 
     public boolean confirmPassword() {

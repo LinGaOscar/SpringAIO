@@ -19,28 +19,41 @@
             Register
         </div>
         <div class="card-body">
-            <form action="#" th:action="@{/register}" method="post">
+            <form action="#" th:action="@{/register}" method="post" th:object="${userForm}">
                 <div class="form-group">
                     <label for="usernameId">username</label>
-                    <input type="text" name="username" id="usernameId" class="form-control" placeholder="Enter username">
+                    <input type="text" name="username" id="usernameId" class="form-control" placeholder="Enter username"
+                           th:field="*{username}">
+                    <p class="form-check-inline text-danger" th:if="${#fields.hasErrors('username')}"
+                       th:errors="*{username}">名稱不能為空</p>
                 </div>
                 <div class="form-group">
                     <label for="passwordId">password</label>
                     <input type="password" name="password" id="passwordId" class="form-control"
-                           placeholder="Enter password">
+                           placeholder="Enter password" th:field="*{password}">
+                    <p class="form-check-inline text-danger" th:if="${#fields.hasErrors('password')}"
+                       th:errors="*{password}">不能為空</p>
                 </div>
                 <div class="form-group">
                     <label for="confirmPasswordId">confirm password</label>
                     <input type="password" name="confirmPassword" id="confirmPasswordId" class="form-control"
-                           placeholder="Enter password">
+                           placeholder="Enter password" th:field="*{confirmPassword}">
+                    <p class="form-check-inline text-danger" th:if="${#fields.hasErrors('confirmPassword')}"
+                       th:errors="*{confirmPassword}">不能為空</p>
                 </div>
                 <div class="form-group">
                     <label for="emailId">Email address</label>
-                    <input type="text" name="email" id="emailId" class="form-control" placeholder="Enter password">
+                    <input type="text" name="email" id="emailId" class="form-control" placeholder="Enter email"
+                           th:field="*{email}">
+                    <p class="form-check-inline text-danger" th:if="${#fields.hasErrors('email')}" th:errors="*{email}">
+                        不能為空</p>
                 </div>
                 <div class="form-group">
                     <label for="phoneId">phone</label>
-                    <input type="text" name="phone" id="phoneId" class="form-control" placeholder="Enter password">
+                    <input type="text" name="phone" id="phoneId" class="form-control" placeholder="Enter phone"
+                           th:field="*{phone}">
+                    <p class="form-check-inline text-danger" th:if="${#fields.hasErrors('phone')}" th:errors="*{phone}">
+                        不能為空</p>
                 </div>
 
                 <button type="submit" class="btn btn-primary">Submit</button>

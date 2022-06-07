@@ -5,13 +5,12 @@ import com.oscar.issac.model.UserForm;
 import com.oscar.issac.service.SysUserServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
-import org.springframework.validation.FieldError;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import javax.validation.Valid;
-import java.util.List;
 
 @Controller
 public class LoginController {
@@ -23,7 +22,8 @@ public class LoginController {
     }
 
     @GetMapping("/register")
-    public String registerPage() {
+    public String registerPage(Model model) {
+        model.addAttribute("userForm", new UserForm());
         return "register";
     }
 
@@ -33,23 +33,15 @@ public class LoginController {
     }
 
     @PostMapping("/register")
-    public String register(@Valid UserForm userForm, BindingResult bindResults) {
-        boolean boo = true;
+    public String register(@Valid UserForm userForm, BindingResult bindResults, Model model) {
         if (!userForm.confirmPassword()) {
             bindResults.rejectValue("confirmPassword", "confirmError", "密碼不一致");
-            boo = false;
         }
 
         if (bindResults.hasErrors()) {
-            List<FieldError> fieldErrorList = bindResults.getFieldErrors();
-            for (FieldError error : fieldErrorList) {
-                System.out.println(error.getField() + " : " + error.getDefaultMessage() + " : " + error.getCode());
-            }
-            boo = false;
+            return "register";
         }
-        if (!boo) {
-            return "/register";
-        }
+
         SysUser sysUser = userForm.convertToSysUser();
         sysUserService.saveUser(sysUser);
         return "redirect:/login";

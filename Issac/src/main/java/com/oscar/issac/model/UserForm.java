@@ -1,7 +1,6 @@
 package com.oscar.issac.model;
 
 import com.oscar.issac.domain.SysUser;
-import com.sun.istack.NotNull;
 import lombok.Data;
 import org.hibernate.validator.constraints.Length;
 import org.springframework.beans.BeanUtils;
@@ -35,7 +34,7 @@ public class UserForm {
         return new UserFormConvert().convert(this);
     }
 
-    private class UserFormConvert implements FormConvert<UserForm, SysUser> {
+    private static class UserFormConvert implements FormConvert<UserForm, SysUser> {
         @Override
         public SysUser convert(UserForm userForm) {
             SysUser sysUser = new SysUser();

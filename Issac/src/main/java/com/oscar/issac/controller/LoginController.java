@@ -1,6 +1,7 @@
 package com.oscar.issac.controller;
 
 import com.oscar.issac.domain.SysUser;
+import com.oscar.issac.model.UserForm;
 import com.oscar.issac.service.SysUserServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;

@@ -10,4 +10,9 @@ public class IndexController {
     public String indexPage() {
         return "index";
     }
+
+    @GetMapping("/exception")
+    public String testException() {
+        throw new RuntimeException();
+    }
 }

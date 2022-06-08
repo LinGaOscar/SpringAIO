@@ -15,9 +15,17 @@
     <div class="card bg-light">
         <h2>Error</h2>
         <p>服務異常</p>
-        <p>路徑[<code th:text="${url}"></code>]</p>
-        <p>詳細[<code th:text="${exception.message}"></code>]</p>
     </div>
+
+    <div th:utext="'&lt;!--'" th:remove="tag"></div>
+    <div th:utext="'Failed Request URL : ' + ${url}" th:remove="tag"></div>
+    <div th:utext="'Exception Message : ' + ${exception.message}" th:remove="tag"></div>
+    <ul>
+        <li th:each="st : ${exception.stackTrace} ">
+            <span th:utext="${st}" th:remove="tag"></span>
+        </li>
+    </ul>
+    <div th:utext="'--&gt;'" th:remove="tag"></div>
 
 </div>
 

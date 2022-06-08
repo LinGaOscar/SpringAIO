@@ -13,6 +13,6 @@ public class IndexController {
 
     @GetMapping("/exception")
     public String testException() {
-        throw new RuntimeException();
+        throw new RuntimeException("測試異常");
     }
 }

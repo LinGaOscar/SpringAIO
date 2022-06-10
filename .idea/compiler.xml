@@ -7,16 +7,19 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="Nicholas" />
         <module name="Issac" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="Issac" target="11" />
+      <module name="Nicholas" target="11" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="Issac" options="-parameters" />
+      <module name="Nicholas" options="-parameters" />
     </option>
   </component>
 </project>

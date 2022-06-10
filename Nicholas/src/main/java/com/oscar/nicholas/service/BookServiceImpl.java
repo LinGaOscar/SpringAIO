@@ -1,8 +1,7 @@
-package com.oscar.issac.service;
+package com.oscar.nicholas.service;
 
-import com.oscar.issac.domain.Book;
-import com.oscar.issac.domain.BookRepository;
-import com.oscar.issac.exception.BookNotFoundException;
+import com.oscar.nicholas.domain.Book;
+import com.oscar.nicholas.domain.BookRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -28,6 +27,16 @@ public class BookServiceImpl implements BookService {
     }
 
     @Override
+    public void deleteBook(Long id) {
+        bookRepository.deleteById(id);
+    }
+
+    @Override
+    public void deleteAllBook() {
+        bookRepository.deleteAll();
+    }
+
+    @Override
     public List<Book> findAll() {
         return bookRepository.findAll();
     }
@@ -35,9 +44,6 @@ public class BookServiceImpl implements BookService {
     @Override
     public Book getBookById(Long id) {
         Book book = bookRepository.findById(id).orElse(null);
-        if (book == null) {
-            throw new BookNotFoundException("查無書本");
-        }
         return book;
     }
 }

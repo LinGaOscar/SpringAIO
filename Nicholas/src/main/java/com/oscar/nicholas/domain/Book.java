@@ -7,6 +7,7 @@ import lombok.ToString;
 import org.hibernate.Hibernate;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.Objects;
 
 @Getter
@@ -15,17 +16,21 @@ import java.util.Objects;
 @RequiredArgsConstructor
 @Entity
 @Table(name = "book2")
-public class Book {
+public class Book implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
     private Long id;
+
     @Column(name = "author")
     private String author;
+
     @Column(name = "description")
     private String description;
+
     @Column(name = "name")
     private String name;
+
     @Column(name = "status")
     private Integer status;
 

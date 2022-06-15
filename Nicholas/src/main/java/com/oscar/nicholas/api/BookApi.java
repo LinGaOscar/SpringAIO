@@ -53,7 +53,7 @@ public class BookApi {
     }
 
     @PutMapping("/books/{id}")
-    public ResponseEntity<?> updateBook(@PathVariable Long id, @RequestBody BookDTO bookDTO, BindingResult bindingResult) {
+    public ResponseEntity<?> updateBook(@PathVariable Long id, @Valid @RequestBody BookDTO bookDTO, BindingResult bindingResult) {
         if (bindingResult.hasErrors()) {
             throw new InvalidRequestException("Invalid parameter", bindingResult);
         }

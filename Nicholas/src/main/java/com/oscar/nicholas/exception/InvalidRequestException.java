@@ -1,7 +1,9 @@
 package com.oscar.nicholas.exception;
 
+import lombok.Getter;
 import org.springframework.validation.Errors;
 
+@Getter
 public class InvalidRequestException extends RuntimeException {
     private Errors errors;
 

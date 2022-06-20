@@ -13,10 +13,6 @@ spring:
     driver-class-name: org.mariadb.jdbc.Driver
   thymeleaf:
     cache: false
+  profiles:
+    active: dev
 
-logging:
-  level:
-    root: info
-    com.oscar: debug
-  file:
-    name: /log/my.log

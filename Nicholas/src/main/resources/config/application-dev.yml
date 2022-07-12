@@ -1,6 +1,6 @@
 logging:
   level:
-    root: debug
+    root: info
     com.oscar.nicholas: debug
   file:
     name: ./devlogs/nicholas.log

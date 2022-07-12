@@ -1,0 +1,67 @@
+2022-07-12 14:33:18.562  INFO 19444 --- [restartedMain] com.oscar.nicholas.NicholasApplication   : Starting NicholasApplication using Java 11.0.13 on LAPTOP-50RIL5NI with PID 19444 (C:\Users\oscar\Documents\GitHub\SpringAIO\Nicholas\target\classes started by oscar in C:\Users\oscar\Documents\GitHub\SpringAIO)
+2022-07-12 14:33:18.563 DEBUG 19444 --- [restartedMain] com.oscar.nicholas.NicholasApplication   : Running with Spring Boot v2.7.0, Spring v5.3.20
+2022-07-12 14:33:18.563  INFO 19444 --- [restartedMain] com.oscar.nicholas.NicholasApplication   : The following 1 profile is active: "dev"
+2022-07-12 14:33:18.591  INFO 19444 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-07-12 14:33:18.592  INFO 19444 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-07-12 14:33:19.034  INFO 19444 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-07-12 14:33:19.076  INFO 19444 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 36 ms. Found 1 JPA repository interfaces.
+2022-07-12 14:33:19.545  INFO 19444 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+2022-07-12 14:33:19.554  INFO 19444 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-07-12 14:33:19.554  INFO 19444 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.63]
+2022-07-12 14:33:19.624  INFO 19444 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-07-12 14:33:19.624  INFO 19444 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1032 ms
+2022-07-12 14:33:19.720  INFO 19444 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-07-12 14:33:19.770  INFO 19444 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-07-12 14:33:19.886  INFO 19444 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-07-12 14:33:19.957  INFO 19444 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-07-12 14:33:20.030  INFO 19444 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-07-12 14:33:20.047  INFO 19444 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MariaDB106Dialect
+2022-07-12 14:33:20.443  INFO 19444 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-07-12 14:33:20.448  INFO 19444 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-07-12 14:33:20.644  WARN 19444 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-07-12 14:33:20.886  INFO 19444 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-07-12 14:33:20.910  INFO 19444 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8082 (http) with context path ''
+2022-07-12 14:33:20.918  INFO 19444 --- [restartedMain] com.oscar.nicholas.NicholasApplication   : Started NicholasApplication in 2.673 seconds (JVM running for 3.378)
+2022-07-12 14:33:31.508  INFO 19444 --- [http-nio-8082-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-12 14:33:31.508  INFO 19444 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-07-12 14:33:31.509  INFO 19444 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-07-12 14:33:38.713  INFO 19444 --- [http-nio-8082-exec-2] com.oscar.nicholas.aspect.LogAspect      : --------- doBefore 1---------
+2022-07-12 14:33:38.721  INFO 19444 --- [http-nio-8082-exec-2] com.oscar.nicholas.api.LogTestApi        : --------- log 0---------
+2022-07-12 14:33:38.721  INFO 19444 --- [http-nio-8082-exec-2] com.oscar.nicholas.aspect.LogAspect      : --------- doAfter 2---------
+2022-07-12 14:40:02.010  INFO 19444 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-07-12 14:40:02.013  INFO 19444 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-07-12 14:40:02.016  INFO 19444 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-07-12 14:40:05.973  INFO 9624 --- [restartedMain] com.oscar.nicholas.NicholasApplication   : Starting NicholasApplication using Java 11.0.13 on LAPTOP-50RIL5NI with PID 9624 (C:\Users\oscar\Documents\GitHub\SpringAIO\Nicholas\target\classes started by oscar in C:\Users\oscar\Documents\GitHub\SpringAIO)
+2022-07-12 14:40:05.973 DEBUG 9624 --- [restartedMain] com.oscar.nicholas.NicholasApplication   : Running with Spring Boot v2.7.0, Spring v5.3.20
+2022-07-12 14:40:05.974  INFO 9624 --- [restartedMain] com.oscar.nicholas.NicholasApplication   : The following 1 profile is active: "dev"
+2022-07-12 14:40:06.000  INFO 9624 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-07-12 14:40:06.000  INFO 9624 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-07-12 14:40:06.386  INFO 9624 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-07-12 14:40:06.423  INFO 9624 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 31 ms. Found 1 JPA repository interfaces.
+2022-07-12 14:40:06.826  INFO 9624 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+2022-07-12 14:40:06.832  INFO 9624 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-07-12 14:40:06.832  INFO 9624 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.63]
+2022-07-12 14:40:06.890  INFO 9624 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-07-12 14:40:06.890  INFO 9624 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 890 ms
+2022-07-12 14:40:06.969  INFO 9624 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-07-12 14:40:06.998  INFO 9624 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-07-12 14:40:07.069  INFO 9624 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-07-12 14:40:07.121  INFO 9624 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-07-12 14:40:07.153  INFO 9624 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-07-12 14:40:07.165  INFO 9624 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MariaDB106Dialect
+2022-07-12 14:40:07.464  INFO 9624 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-07-12 14:40:07.469  INFO 9624 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-07-12 14:40:07.645  WARN 9624 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-07-12 14:40:07.844  INFO 9624 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-07-12 14:40:07.866  INFO 9624 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8082 (http) with context path ''
+2022-07-12 14:40:07.874  INFO 9624 --- [restartedMain] com.oscar.nicholas.NicholasApplication   : Started NicholasApplication in 2.182 seconds (JVM running for 2.736)
+2022-07-12 14:40:18.476  INFO 9624 --- [http-nio-8082-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-12 14:40:18.477  INFO 9624 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-07-12 14:40:18.478  INFO 9624 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-07-12 14:40:18.492  INFO 9624 --- [http-nio-8082-exec-1] com.oscar.nicholas.aspect.LogAspect      : --------- doBefore 1---------
+2022-07-12 14:40:18.498  INFO 9624 --- [http-nio-8082-exec-1] com.oscar.nicholas.api.LogTestApi        : --------- log 0---------
+2022-07-12 14:40:18.499  INFO 9624 --- [http-nio-8082-exec-1] com.oscar.nicholas.aspect.LogAspect      : --------- doAfterReturning 3--------- result:logtest 
+2022-07-12 14:40:18.499  INFO 9624 --- [http-nio-8082-exec-1] com.oscar.nicholas.aspect.LogAspect      : --------- doAfter 2---------
+2022-07-12 14:40:34.965  INFO 9624 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-07-12 14:40:34.968  INFO 9624 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-07-12 14:40:34.970  INFO 9624 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

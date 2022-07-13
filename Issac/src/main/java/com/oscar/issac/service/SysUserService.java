@@ -9,4 +9,5 @@ public interface SysUserService {
     SysUser saveUser(SysUser sysUser);
     SysUser updateUser(SysUser sysUser);
     List<SysUser> findAll();
+    SysUser findByUsernameAndPassword(String username,String password);
 }

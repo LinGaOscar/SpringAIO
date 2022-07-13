@@ -5,6 +5,7 @@ import com.oscar.nicholas.exception.NotFoundException;
 import com.oscar.nicholas.resource.ErrorResource;
 import com.oscar.nicholas.resource.FieldResource;
 import com.oscar.nicholas.resource.InvalidErrorResource;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.Errors;
@@ -17,13 +18,16 @@ import java.util.ArrayList;
 import java.util.List;
 
 @RestControllerAdvice
+@Slf4j
 public class ApiExceptionHandler {
 
     @ExceptionHandler(NotFoundException.class)
     @ResponseBody
     public ResponseEntity<?> handleNotFound(RuntimeException e) {
         ErrorResource errorResource = new ErrorResource(e.getMessage());
-        return new ResponseEntity<>(errorResource, HttpStatus.NOT_FOUND);
+        ResponseEntity result = new ResponseEntity<>(errorResource, HttpStatus.NOT_FOUND);
+        log.warn(" result -------- {}", result);
+        return result;
     }
 
     @ExceptionHandler(InvalidRequestException.class)
@@ -37,12 +41,16 @@ public class ApiExceptionHandler {
             fieldResources.add(fieldResource);
         }
         InvalidErrorResource invalidErrorResource = new InvalidErrorResource(e.getMessage(), fieldResources);
-        return new ResponseEntity<>(invalidErrorResource, HttpStatus.BAD_REQUEST);
+
+        ResponseEntity result = new ResponseEntity<>(invalidErrorResource, HttpStatus.BAD_REQUEST);
+        log.warn(" result -------- {}", result);
+        return result;
     }
 
     @ExceptionHandler(Exception.class)
     @ResponseBody
     public ResponseEntity<?> handleException(Exception exception) {
+        log.error("Error ------- {}",exception.getMessage());
         return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
     }
 }

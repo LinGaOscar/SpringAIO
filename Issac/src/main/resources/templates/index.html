@@ -18,9 +18,9 @@
         <div class="card-header">
             <h1 class="card-header">Welcome</h1>
             <p th:text="${session.user.username}"></p>
-            <a href="#" th:href="@{/books/1}">book1</a>
+            <a href="#" th:href="@{/book/1}">book1</a>
         </div>
-<a href="#" th:href="@{/login}" class="btn btn-warning">logout</a>
+        <a href="#" th:href="@{/logout}" class="btn btn-warning">logout</a>
     </div>
 </div>
 </body>
